@@ -125,7 +125,7 @@ pipeline {
             }
             post{
                 failure{
-                    googlechatnotification ( url: 'https://chat.googleapis.com/v1/spaces/AAAAMbM5bMM/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=bGH9ULKC5K1a3NTmt_nYV1QJZsC4vc6pZ9jl1AVO0RI%3D',
+                    googlechatnotification ( url: 'https://chat.googleapis.com/v1/spaces/AAAAMbM5bMM/messages?key=xxxxxxxxxxxxxxxxxxxxxxxx',
                             message: "The Docker image build for the microservice:'${SERVICE_NAME}',branch:'${BUILD_TARGET}' and jobname:'${jobName}' was unsuccessful")
                     emailext subject: " Failed: Docker Image Build for Branch:'${BUILD_TARGET}', microservice:'${SERVICE_NAME}' and the jobname:'${jobName}',build status:'${buildStatus}'",
                         body: "The Docker image build process failed for the microservice '${SERVICE_NAME}, job '${jobName}' with build status:'${buildStatus}'.",
